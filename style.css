@@ -118,14 +118,14 @@ html {
   .nav-links {
     display: none;
     position: fixed;
-    top: 0;
+    top: 60px;
     right: 0;
-    height: 80vh;
-    width: 150px;
+    height: 30vh;
+    width: 100px;
     background-color: #3e1e05;
     flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+    align-items: stretch;
+    /* Makes each link fill the width */
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 9;
@@ -138,24 +138,22 @@ html {
     transform: translateX(0);
   }
 
-  /* Table-like styling for links with spacing */
+  /* Table-like styling for links */
   .nav-links li {
-    width: 90%;
-    margin: 10px 0;
-    /* Spacing between each link */
+    width: 100%;
   }
 
   .nav-links a {
     display: block;
-    padding: 15px 20px;
+    padding: 15px 0;
     font-size: 1.2rem;
     color: #ffd700;
     text-align: center;
     text-decoration: none;
+    border-bottom: 1px solid #8b4513;
+    /* Border between items */
     background-color: rgba(0, 0, 0, 0.2);
     /* Slightly darker background */
-    border-radius: 8px;
-    /* Rounded corners */
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
@@ -163,6 +161,11 @@ html {
     color: #ffae42;
     background-color: rgba(255, 215, 0, 0.2);
     /* Light background on hover */
+  }
+
+  /* Last item without border */
+  .nav-links li:last-child a {
+    border-bottom: none;
   }
 }
 
